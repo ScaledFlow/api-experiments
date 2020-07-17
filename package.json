@@ -1,0 +1,25 @@
+{
+  "name": "api-experiments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "crypto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScaledFlow/api-experiments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScaledFlow/api-experiments/issues"
+  },
+  "homepage": "https://github.com/ScaledFlow/api-experiments#readme",
+  "dependencies": {
+    "crypto-price": "0.0.6",
+    "finnhub": "^1.1.7",
+    "jest": "^26.1.0"
+  }
+}
