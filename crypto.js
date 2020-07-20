@@ -1,7 +1,7 @@
 
 console.log("crypto.js")
 
-cryptoTrack = ["BTC", "LINK", "BSV", "ALGO"];
+cryptoTrack = ["BTC", "USDC", "LINK", "BSV", "ALGO"];
 
 
 class Crypto {

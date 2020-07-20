@@ -1,0 +1,4 @@
+// made dynamic link to Trading View.
+// Need to know the exchange the stock is traded on.
+// https://www.tradingview.com/symbols/NASDAQ-AAPL/
+// https://www.tradingview.com/symbols/NYSE-F/
