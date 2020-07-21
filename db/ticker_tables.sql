@@ -73,8 +73,15 @@ CREATE TABLE covid_cnt (
 );
 
 
-INSERT INTO test_dt(created_at, covide_death_us_ter)
-VALUES(Now(), 138000);
+CREATE TABLE covid_cnt_us (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    created_at DATE DEFAULT GETDATE(),
+    covide_death_us_ter varchar(50) NOT NULL
+);
+
+
+INSERT INTO covid_cnt(created_at, created_at)
+VALUES(Now(), 139000);
 
 
 SELECT 
@@ -94,3 +101,8 @@ WHERE
     DATE(created_at) = '2020-07-20';
 
 SELECT DATE_SUB("2020-07-20", INTERVAL 7 DAY);    
+
+INSERT INTO covid_cnt(created_at, covide_death_us_ter)
+VALUES("2020-07-20", 139000);
+
+select * from covid_cnt;

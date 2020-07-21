@@ -1,5 +1,9 @@
 console.log("server.js")
 
+// Import MySQL connection.
+var connection = require("./config/connection.js");
+
+
 // NPM 
 const finnhub = require("finnhub");
 const request = require("request");
@@ -58,6 +62,7 @@ request(
       }
   
       console.log("total deaths = " + deaths);
+      //createCovidCase();
       console.log(body[0]);
     }
   );
@@ -102,3 +107,60 @@ request(
 //   for (i = 0; i < num; i++) {
 //       setTimeout(myFunc, 15000, 'test');
 //   }
+
+
+function multiSearch() {
+    var query = "SELECT * FROM covid_cnt";
+    connection.query(query, function(err, res) {
+    //   for (var i = 0; i < res.length; i++) {
+    //     console.log(res[i].artist);
+    //   }
+        console.log("return from multiSearch = " + res)
+    
+      //runSearch();
+    });
+  }
+  //multiSearch();
+
+function readCovidCases() {
+    console.log("Selecting all covid_cnt...\n");
+    connection.query("SELECT * FROM covid_cnt", function(err, res) {
+      if (err) throw err;
+      // Log all results of the SELECT statement
+      console.log(res[0]);
+      connection.end();
+    });
+  }
+  
+  readCovidCases();
+
+  function createCovidCase(count) {
+    console.log("Insert covid death count...\n");
+   
+    var datetime = new Date();
+    console.log("date time value = " + datetime);
+
+    var query = connection.query(
+      "INSERT INTO covid_cnt SET ?",
+      {
+        created_at: datetime,
+        covide_death_us_ter: count
+      },
+      function(err, res) {
+        if (err) throw err;
+        console.log(res.affectedRows + " product inserted!\n");
+      }
+    );
+      // logs the actual query being run
+  console.log(query.sql);
+}
+  
+createCovidCase(500000);
+
+// console.log("date = " + getNow());
+
+// var datetime = Date.now();
+// console.log("this is the datetime = " + datetime);
+
+var datetime = new Date();
+console.log(datetime.toISOString().slice(0,10));
