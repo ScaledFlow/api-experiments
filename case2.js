@@ -68,7 +68,8 @@ request(
   console.log(query.sql);
 }
 // Log total covid death by the hour
-setInterval(intervalFunc, 3600000, "test");
+//setInterval(intervalFunc, 3600000, "test");
+setInterval(intervalFunc, 6000, "test");
 // createCovidCase(500000);
 
 

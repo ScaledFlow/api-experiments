@@ -157,10 +157,6 @@ function readCovidCases() {
   
 createCovidCase(500000);
 
-// console.log("date = " + getNow());
-
-// var datetime = Date.now();
-// console.log("this is the datetime = " + datetime);
 
 var datetime = new Date();
 console.log(datetime.toISOString().slice(0,10));

@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
   user: "root",
   password: "Timber8293$@",
 //   database: "api_experiment_db"
-  database: "time_date_exp_db"
+  database: "sf_dashboard_test_db"
 });
 
 connection.connect(function(err) {
